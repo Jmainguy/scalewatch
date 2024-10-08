@@ -83,11 +83,14 @@ Example output:
 NAMESPACE    NAME                    STATE    GITHUBCONFIGURL                    RUNNERSCALESETNAME
 arc-system   runnerscaleset-sample   Online   https://github.com/Standouthost    self-hosted
 emu-test     runnerscaleset-emu      Online   https://github.com/enterprise-emu  self-hosted-enterprise
+```
+
 You can also inspect the full resource by running:
 
 ```bash
 kubectl get runnerscaleset runnerscaleset-sample -n arc-system -o yaml
 ```
+
 ## Troubleshooting
 
 * Pod Not Restarting: Ensure that the operator has the correct permissions to delete and restart pods in the target namespace.
