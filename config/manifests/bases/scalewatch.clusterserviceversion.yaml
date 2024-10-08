@@ -1,0 +1,50 @@
+apiVersion: operators.coreos.com/v1alpha1
+kind: ClusterServiceVersion
+metadata:
+  annotations:
+    alm-examples: '[]'
+    capabilities: Basic Install
+  name: scalewatch.v0.0.0
+  namespace: placeholder
+spec:
+  apiservicedefinitions: {}
+  customresourcedefinitions:
+    owned:
+    - description: RunnerScaleSet is the Schema for the runnerscalesets API
+      displayName: Runner Scale Set
+      kind: RunnerScaleSet
+      name: runnerscalesets.scalewatch.soh.re
+      version: v1alpha1
+  description: An operator for watching Github RunnerScaleSets and bouncing the pod
+    responsible if offline
+  displayName: scalewatch
+  icon:
+  - base64data: ""
+    mediatype: ""
+  install:
+    spec:
+      deployments: null
+    strategy: ""
+  installModes:
+  - supported: false
+    type: OwnNamespace
+  - supported: false
+    type: SingleNamespace
+  - supported: false
+    type: MultiNamespace
+  - supported: true
+    type: AllNamespaces
+  keywords:
+  - RunnerScaleSet
+  - Github Runner
+  links:
+  - name: Scalewatch
+    url: https://scalewatch.domain
+  maintainers:
+  - email: jon@soh.re
+    name: Jonathan Mainguy
+  maturity: alpha
+  provider:
+    name: soh.re
+    url: https://github.com/jmainguy/scalewatch
+  version: 0.0.0

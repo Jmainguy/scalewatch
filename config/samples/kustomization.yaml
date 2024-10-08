@@ -1,0 +1,4 @@
+## Append samples of your project ##
+resources:
+- scalewatch_v1alpha1_runnerscaleset.yaml
+#+kubebuilder:scaffold:manifestskustomizesamples

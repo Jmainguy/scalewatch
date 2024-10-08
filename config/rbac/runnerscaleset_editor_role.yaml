@@ -1,0 +1,27 @@
+# permissions for end users to edit runnerscalesets.
+apiVersion: rbac.authorization.k8s.io/v1
+kind: ClusterRole
+metadata:
+  labels:
+    app.kubernetes.io/name: scalewatch
+    app.kubernetes.io/managed-by: kustomize
+  name: runnerscaleset-editor-role
+rules:
+- apiGroups:
+  - scalewatch.soh.re
+  resources:
+  - runnerscalesets
+  verbs:
+  - create
+  - delete
+  - get
+  - list
+  - patch
+  - update
+  - watch
+- apiGroups:
+  - scalewatch.soh.re
+  resources:
+  - runnerscalesets/status
+  verbs:
+  - get

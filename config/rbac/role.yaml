@@ -1,0 +1,49 @@
+---
+apiVersion: rbac.authorization.k8s.io/v1
+kind: ClusterRole
+metadata:
+  name: manager-role
+rules:
+- apiGroups:
+  - ""
+  resources:
+  - pods
+  verbs:
+  - delete
+  - get
+  - list
+  - watch
+- apiGroups:
+  - ""
+  resources:
+  - secrets
+  verbs:
+  - get
+  - list
+  - watch
+- apiGroups:
+  - scalewatch.soh.re
+  resources:
+  - runnerscalesets
+  verbs:
+  - create
+  - delete
+  - get
+  - list
+  - patch
+  - update
+  - watch
+- apiGroups:
+  - scalewatch.soh.re
+  resources:
+  - runnerscalesets/finalizers
+  verbs:
+  - update
+- apiGroups:
+  - scalewatch.soh.re
+  resources:
+  - runnerscalesets/status
+  verbs:
+  - get
+  - patch
+  - update

@@ -1,0 +1,11 @@
+apiVersion: scalewatch.soh.re/v1alpha1
+kind: RunnerScaleSet
+metadata:
+  labels:
+    app.kubernetes.io/name: scalewatch
+    app.kubernetes.io/managed-by: kustomize
+  name: runnerscaleset-sample
+spec:
+  githubConfigSecret: gha-runner-token
+  githubConfigURL: https://github.com/Standouthost
+  name: self-hosted

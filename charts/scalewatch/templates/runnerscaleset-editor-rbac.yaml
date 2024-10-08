@@ -1,0 +1,25 @@
+apiVersion: rbac.authorization.k8s.io/v1
+kind: ClusterRole
+metadata:
+  name: {{ include "scalewatch.fullname" . }}-runnerscaleset-editor-role
+  labels:
+  {{- include "scalewatch.labels" . | nindent 4 }}
+rules:
+- apiGroups:
+  - scalewatch.soh.re
+  resources:
+  - runnerscalesets
+  verbs:
+  - create
+  - delete
+  - get
+  - list
+  - patch
+  - update
+  - watch
+- apiGroups:
+  - scalewatch.soh.re
+  resources:
+  - runnerscalesets/status
+  verbs:
+  - get
