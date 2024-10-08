@@ -54,8 +54,9 @@ Clone the Repository:
 ```bash
 git clone https://github.com/jmainguy/scalewatch.git
 cd scalewatch
-Deploy the Operator using Kustomize:
 ```
+
+Deploy the Operator using Kustomize:
 
 ```bash
 kubectl apply -k ./config/default
