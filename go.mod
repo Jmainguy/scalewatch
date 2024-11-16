@@ -16,7 +16,7 @@ require (
 
 require github.com/imdario/mergo v0.3.16 // indirect
 
-replace github.com/imdario/mergo => github.com/imdario/mergo v0.3.16
+replace github.com/imdario/mergo => github.com/imdario/mergo v1.0.1
 
 require (
 	github.com/beorn7/perks v1.0.1 // indirect
