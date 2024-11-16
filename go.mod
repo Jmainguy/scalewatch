@@ -13,6 +13,7 @@ require (
 	k8s.io/client-go v0.31.2
 	sigs.k8s.io/controller-runtime v0.19.1
 )
+replace github.com/imdario/mergo => github.com/imdario/mergo v0.3.16
 
 require (
 	github.com/beorn7/perks v1.0.1 // indirect
